@@ -1,0 +1,22 @@
+{
+  "translations": {
+    "welcome": {
+      "react": "Bienvenido a React y react-i18next!!"
+    },
+    "title": "Título",
+    "header": {
+      "corporate": "Corporativo",
+      "coworkings": "Coworkings",
+      "subscriptions": "Subscripciones"
+    },
+    "loginView": {
+      "valueProp": "Un lugar de trabajo fácil y flexible para equipos descentralizados",
+      "youWillKnowMoreShortly": "Podrás saber más pronto...",
+      "loginForm": {
+        "email": "Email",
+        "password": "Contraseña",
+        "submit": "Enviar"
+      }
+    }
+  }
+}
