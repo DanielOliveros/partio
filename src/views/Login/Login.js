@@ -1,41 +1,44 @@
 import React from 'react';
-import { css } from '@styled-system/css';
-import styled from '@emotion/styled';
 import { withTranslation } from 'react-i18next';
+import OneClickOffice from '@/common/components/Sections/OneClickOffice';
+import OurPromise from '@/common/components/Sections/OurPromise/OurPromise';
+import HowItWorks from '@/common/components/Sections/HowItWorks/HowItWorks';
+import Coworkings from '@/common/components/Sections/Coworkings/Coworkings';
+import AboutUs from '@/common/components/Sections/AboutUs/AboutUs';
+import Footer from '@/common/components/Footer/Footer';
 
-const StyledImageContainer = styled('div')(css({
-  height: '644px',
-  backgroundImage: 'url("https://cdn.pixabay.com/photo/2016/10/16/10/30/office-space-1744803_960_720.jpg")',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center',
-  margin: '0 auto',
-}));
+const Section = ({ children }) => (
+  <div css={{
+    width: '100%', display: 'flex', justifyContent: 'center',
+  }}
+  >
+    <div css={{
+      display: 'flex', paddingBottom: '180px', flexGrow: '1', maxWidth: '1130px',
+    }}
+    >
+      {children}
+    </div>
+  </div>
+);
 
 const Login = ({ content }) => (
-  <div css={{ padding: '40px 80px' }}>
-    <div css={{
-      fontSize: '60px',
-      fontWeight: '200',
-      textAlign: 'center',
-      maxWidth: '800px',
-      margin: '0 auto',
-      paddingBottom: '40px',
-    }}
-    >
-      {content.valueProp}
-    </div>
-    <StyledImageContainer />
-    <div css={{
-      fontSize: '30px',
-      fontWeight: '200',
-      textAlign: 'center',
-      maxWidth: '800px',
-      margin: '0 auto',
-      padding: '40px 0',
-    }}
-    >
-      {content.youWillKnowMoreShortly}
-    </div>
+  <div>
+    <Section>
+      <OneClickOffice content={content.oneClickOffice} />
+    </Section>
+    <Section>
+      <OurPromise content={content.ourPromise} />
+    </Section>
+    <Section>
+      <HowItWorks content={content.howItWorks} />
+    </Section>
+    <Section>
+      <Coworkings />
+    </Section>
+    <Section>
+      <AboutUs content={content.aboutUs} />
+    </Section>
+    <Footer content={content.footer} />
   </div>
 );
 

@@ -17,6 +17,45 @@
         "password": "Password",
         "submit": "Submit"
       }
+    },
+    "landingPage": {
+      "oneClickOffice": {
+        "title": "One click office",
+        "text": "As easy as it sounds. Find the office that suits you best and book it with just one click. Our catalgogue of coworking is growing as the speed of light in cities like Barcelona, Madrid and Valencia. Download our app to discover the entire experience of partio."
+      },
+      "ourPromise": {
+        "title": "Our promise",
+        "subtitle1": "Work wherever you want",
+        "subtitle2": "Take advantege of flexibility",
+        "subtitle3": "Improve your lifestyle",
+        "text1": "In your city, or traveling, you can reserve your place of work without worries.",
+        "text2": "Enjoy them whenever you want.",
+        "text3": "Disconnect from your home routine, Meet colleagues and new people in the best spaces"
+      },
+      "howItWorks": {
+        "title": "How it works",
+        "subtitle1": "Search",
+        "subtitle2": "Book",
+        "subtitle3": "Enjoy",
+        "text1": "Explain brefely where they can search and how it works.",
+        "text2": "Explain briefely how can they book.",
+        "text3": "Same here. Finish with a sentence like. Meet colleagues and enjoy more your life."
+      },
+      "aboutUs": {
+        "title": "About us",
+        "text": "We are 4 young entrepenours wanting to make working life easier for everyone."
+      },
+      "footer": {
+        "title": "Contact Partio",
+        "text": "Want to have more information or a meeting with the team? We are here to answer your questions.",
+        "contactForm": {
+          "name": "Name",
+          "company": "Company",
+          "email": "Email",
+          "message": "Message",
+          "send": "Send"
+        }
+      }
     }
   }
 }

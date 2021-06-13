@@ -32,6 +32,10 @@ const theme = {
     $black: '#000000',
     $transparent: '#00000000',
   },
+  partioColors: {
+    $darkGrey: '#000131',
+    $textGrey: '#55565A',
+  },
 };
 
 function App() {
@@ -42,10 +46,7 @@ function App() {
           <AuthContextProvider>
             <>
               <Header />
-              <div css={{
-                paddingTop: '100px',
-              }}
-              >
+              <div>
                 <Switch>
                   <PublicRoute path={routes.LOGIN} component={LoginViewContainer} />
                   <PrivateRoute exact path={routes.LOGOUT} component={Logout} />

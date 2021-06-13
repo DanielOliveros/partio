@@ -5,25 +5,24 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '@emotion/react';
 
 const LanguageSwitch = () => {
-  const { colors } = useTheme();
+  const { partioColors } = useTheme();
   const { i18n } = useTranslation();
-  const currentLanguage = i18n.language;
   const onSetLanguage = (language) => {
     i18n.changeLanguage(language);
   };
-  const getLanguageOptionStyles = (language) => ({
-    cursor: 'pointer',
-    opacity: `${currentLanguage !== language ? 0.5 : colors.$colorPrimary}`,
-  });
+
   return (
-    <div css={{ color: `${colors.$colorPrimary}`, display: 'flex' }}>
-      <div css={getLanguageOptionStyles('en')} onClick={() => onSetLanguage('en')}>
+    <div css={{
+      color: `${partioColors.$darkGrey}`, display: 'flex', alignItems: 'center', padding: '5px 15px',
+    }}
+    >
+      <span css={{ cursor: 'pointer' }} onClick={() => onSetLanguage('en')}>
         EN
-      </div>
-      <div>|</div>
-      <div css={getLanguageOptionStyles('es')} onClick={() => onSetLanguage('es')}>
+      </span>
+      <span>|</span>
+      <span css={{ cursor: 'pointer' }} onClick={() => onSetLanguage('es')}>
         ES
-      </div>
+      </span>
     </div>
   );
 };

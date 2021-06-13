@@ -17,6 +17,45 @@
         "password": "Contraseña",
         "submit": "Enviar"
       }
+    },
+    "landingPage": {
+      "oneClickOffice": {
+        "title": "Tu oficina con un click",
+        "text": "Tan fácil como suena. Encuentra la oficina o coworking que más te convenga y resérvala con un solo click. Nuestro catálogo de coworkings crece a la velocidad de la luz en ciudades como Barcelona, Madrid y Valencia. Descarga nuestra aplicación para descubrir toda la experiencia de Partio."
+      },
+      "ourPromise": {
+        "title": "Nuestro compromiso",
+        "subtitle1": "Trabaja desde donde quieras",
+        "subtitle2": "Aprovecha la flexibilidad",
+        "subtitle3": "Potencia tu estilo de vida",
+        "text1": "En tu ciudad o mientras viajas podrás reservar tu coworking sin preocupaciones.",
+        "text2": "Disfrútalo cuando y donde quieras.",
+        "text3": "Desconecta de tu rutina en casa, reencuéntrate con tus compañeros y conoce gente nueva en los mejores espacios de trabajo."
+      },
+      "howItWorks": {
+        "title": "Cómo funciona",
+        "subtitle1": "Busca",
+        "subtitle2": "Reserva",
+        "subtitle3": "Disfruta",
+        "text1": "Explain brefely where they can search and how it works.",
+        "text2": "Explain briefely how can they book.",
+        "text3": "Same here. Finish with a sentence like. Meet colleagues and enjoy more your life."
+      },
+      "aboutUs": {
+        "title": "Sobre nosotros",
+        "text": "Somos 4 jóvenes emprendedores que pretenden mejorar la manera de trabajar de las personas."
+      },
+      "footer": {
+        "title": "Contacta con Partio",
+        "text": "¿Quieres saber más o conocer al equipo? Estamos aquí para responder a tus preguntas.",
+        "contactForm": {
+          "name": "Nombre",
+          "company": "Empresa",
+          "email": "Email",
+          "Message": "Mensaje",
+          "Send": "Enviar"
+        }
+      }
     }
   }
 }
