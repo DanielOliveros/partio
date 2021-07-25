@@ -11,7 +11,9 @@ const LoginViewContainer = () => {
     youWillKnowMoreShortly: t('loginView.youWillKnowMoreShortly'),
     oneClickOffice: {
       title: t('landingPage.oneClickOffice.title'),
-      text: t('landingPage.oneClickOffice.text'),
+      text1: t('landingPage.oneClickOffice.text1'),
+      text2: t('landingPage.oneClickOffice.text2'),
+      text3: t('landingPage.oneClickOffice.text3'),
     },
     ourPromise: {
       title: t('landingPage.ourPromise.title'),

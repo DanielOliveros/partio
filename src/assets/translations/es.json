@@ -21,7 +21,9 @@
     "landingPage": {
       "oneClickOffice": {
         "title": "Tu oficina con un click",
-        "text": "Tan fácil como suena. Encuentra la oficina o coworking que más te convenga y resérvala con un solo click. Nuestro catálogo de coworkings crece a la velocidad de la luz en ciudades como Barcelona, Madrid y Valencia. Descarga nuestra aplicación para descubrir toda la experiencia de Partio."
+        "text1": "Tan fácil como suena. Encuentra la oficina o coworking que más te convenga y resérvala con un solo click. ",
+        "text2": "Nuestro catálogo de coworkings crece a la velocidad de la luz en ciudades como Barcelona, Madrid y Valencia. ",
+        "text3": "Descarga nuestra aplicación para descubrir toda la experiencia de Partio."
       },
       "ourPromise": {
         "title": "Nuestro compromiso",

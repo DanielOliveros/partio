@@ -21,7 +21,9 @@
     "landingPage": {
       "oneClickOffice": {
         "title": "One click office",
-        "text": "As easy as it sounds. Find the office that suits you best and book it with just one click. Our catalgogue of coworking is growing as the speed of light in cities like Barcelona, Madrid and Valencia. Download our app to discover the entire experience of partio."
+        "text1": "As easy as it sounds. Find the office that suits you best and book it with just one click. ",
+        "text2": "Our catalgogue of coworking is growing as the speed of light in cities like Barcelona, Madrid and Valencia. ",
+        "text3": "Download our app to discover the entire experience of partio."
       },
       "ourPromise": {
         "title": "Our promise",

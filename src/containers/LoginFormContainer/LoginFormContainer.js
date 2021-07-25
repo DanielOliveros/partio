@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '@/contexts/authContext';
-import LoginForm from '@/common/components/LoginForm';
+import LoginForm from '@/components/LoginForm';
 import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 

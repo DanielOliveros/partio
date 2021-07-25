@@ -1,11 +1,11 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
-import OneClickOffice from '@/common/components/Sections/OneClickOffice';
-import OurPromise from '@/common/components/Sections/OurPromise/OurPromise';
-import HowItWorks from '@/common/components/Sections/HowItWorks/HowItWorks';
-import Coworkings from '@/common/components/Sections/Coworkings/Coworkings';
-import AboutUs from '@/common/components/Sections/AboutUs/AboutUs';
-import Footer from '@/common/components/Footer/Footer';
+import OneClickOffice from '@/components/Sections/OneClickOffice';
+import OurPromise from '@/components/Sections/OurPromise/OurPromise';
+import HowItWorks from '@/components/Sections/HowItWorks/HowItWorks';
+import Coworkings from '@/components/Sections/Coworkings/Coworkings';
+import AboutUs from '@/components/Sections/AboutUs/AboutUs';
+import Footer from '@/components/Footer/Footer';
 
 const Section = ({ children }) => (
   <div css={{
@@ -13,7 +13,7 @@ const Section = ({ children }) => (
   }}
   >
     <div css={{
-      display: 'flex', paddingBottom: '180px', flexGrow: '1', maxWidth: '1130px',
+      display: 'flex', flexGrow: '1', maxWidth: '1130px',
     }}
     >
       {children}

@@ -2,7 +2,12 @@ import React from 'react';
 
 const AppStore = () => (
   <svg width="213" height="63" viewBox="0 0 213 63" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-    <rect width="213.686" height="63" rx="16" fill="url(#pattern0)" />
+    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="213" height="63">
+      <rect width="212.914" height="63" rx="16" fill="#C4C4C4" />
+    </mask>
+    <g mask="url(#mask0)">
+      <rect width="213.686" height="63" rx="16" fill="url(#pattern0)" />
+    </g>
     <defs>
       <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
         <use xlinkHref="#image0" transform="translate(-0.0541516 -1.35102) scale(0.00120337 0.00408163)" />

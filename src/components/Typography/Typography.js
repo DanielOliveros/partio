@@ -1,11 +1,11 @@
 import React from 'react';
 import { useTheme } from '@emotion/react';
 
-const Title = ({ children }) => {
+const Title = ({ children, ...props }) => {
   const { partioColors } = useTheme();
   return (
     <div css={{
-      position: 'relative', fontSize: '44px', lineHeight: 0, width: 'fit-content',
+      position: 'relative', fontSize: '44px', lineHeight: 0, width: 'fit-content', ...props,
     }}
     >
       <div css={{ zIndex: 2, color: partioColors.$darkGrey }}>
@@ -22,7 +22,7 @@ const Title = ({ children }) => {
   );
 };
 
-const Subtitle = ({ children }) => {
+const Subtitle = ({ children, ...props }) => {
   const { partioColors } = useTheme();
 
   return (
@@ -31,6 +31,7 @@ const Subtitle = ({ children }) => {
       lineHeight: '30px',
       color: partioColors.$darkGrey,
       margin: 0,
+      ...props,
     }}
     >
       {children}
@@ -38,23 +39,26 @@ const Subtitle = ({ children }) => {
   );
 };
 
-const Text = ({ children }) => {
+const Text = ({ children, ...props }) => {
   const { partioColors } = useTheme();
   return (
-    <p css={{ color: partioColors.$textGrey, lineHeight: '22px', margin: 0 }}>
+    <p css={{
+      color: partioColors.$textGrey, lineHeight: '22px', margin: 0, ...props,
+    }}
+    >
       {children}
     </p>
   );
 };
 
-const Typography = ({ type, children }) => {
+const Typography = ({ type, children, ...props }) => {
   switch (type) {
     case 'title':
-      return <Title>{children}</Title>;
+      return <Title {...props}>{children}</Title>;
     case 'subtitle':
-      return <Subtitle>{children}</Subtitle>;
+      return <Subtitle {...props}>{children}</Subtitle>;
     default:
-      return <Text>{children}</Text>;
+      return <Text {...props}>{children}</Text>;
   }
 };
 

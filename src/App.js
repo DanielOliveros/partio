@@ -8,10 +8,10 @@ import {
   Switch,
 } from 'react-router-dom';
 import * as routes from '@/config/router/paths';
-import PrivateRoute from '@/common/components/router/PrivateRoute';
-import PublicRoute from '@/common/components/router/PublicRoute';
+import PrivateRoute from '@/components/router/PrivateRoute';
+import PublicRoute from '@/components/router/PublicRoute';
 import AuthContextProvider from '@/contexts/authContext';
-import Header from '@/common/components/Header';
+import Header from '@/components/Header';
 
 const theme = {
   name: 'mainTheme',

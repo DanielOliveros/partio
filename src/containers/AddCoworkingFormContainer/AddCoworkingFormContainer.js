@@ -1,16 +1,35 @@
 import React, { useState } from 'react';
-import Input from '@/common/components/Input';
+import {
+  Input, Wrapper, Button, FormFieldWrapper, Label,
+} from '@/components/form';
+import { db } from '@/firebase/firebaseIndex';
+
+const initialFormState = {
+  coworkingName: '',
+  direction: '',
+  openingHours: '',
+  availableSeats: '',
+  description: '',
+  instructions: '',
+  amenities: {
+    freeCoffee: false,
+    freeWifi: false,
+    kitchen: false,
+    games: false,
+    terrace: false,
+    printer: false,
+  },
+  phoneNumber: '',
+};
 
 const useForm = () => {
-  const [inputs, setInputs] = useState({
-    company: '',
-    instructions: '',
-    name: '',
-    schedule: '',
-    slug: '',
-  });
+  const [inputs, setInputs] = useState({ ...initialFormState });
   const handleSubmit = (event) => {
     if (event) {
+      db.collection('coworks').add({
+        ...inputs,
+      });
+      setInputs({ ...initialFormState });
       event.preventDefault();
     }
   };
@@ -27,37 +46,78 @@ const useForm = () => {
 const AddCoworkingFormContainer = () => {
   const { handleSubmit, handleInputChange, inputs } = useForm();
   return (
-    <>
+    <Wrapper padding="20px 30px">
       <form onSubmit={handleSubmit}>
         <div css={{
           display: 'flex',
           flexFlow: 'column',
         }}
         >
-          <div>
-            <label>First Name</label>
-            <Input type="text" name="firstName" onChange={handleInputChange} value={inputs.firstName} required />
-          </div>
-          <div>
-            <label>Last Name</label>
-            <Input type="text" name="lastName" onChange={handleInputChange} value={inputs.lastName} required />
-          </div>
-          <div>
-            <label>Email Address</label>
-            <Input type="email" name="email" onChange={handleInputChange} value={inputs.email} required />
-          </div>
-          <div>
-            <label>Password</label>
-            <Input type="password" name="password1" onChange={handleInputChange} value={inputs.password1} />
-          </div>
-          <div>
-            <label>Re-enter Password</label>
-            <Input type="password" name="password2" onChange={handleInputChange} value={inputs.password2} />
-          </div>
-          <button type="submit">Sign Up</button>
+          <FormFieldWrapper>
+            <Label>Coworking name:</Label>
+            <Input type="text" name="coworkingName" onChange={handleInputChange} value={inputs.coworkingName} required />
+          </FormFieldWrapper>
+          <FormFieldWrapper>
+            <Label>Direction</Label>
+            <Input type="text" name="direction" onChange={handleInputChange} value={inputs.direction} required />
+          </FormFieldWrapper>
+          <FormFieldWrapper>
+            <Label>Opening Hours</Label>
+            <Input type="text" name="openingHours" onChange={handleInputChange} value={inputs.openingHours} required />
+          </FormFieldWrapper>
+          <FormFieldWrapper>
+            <Label>Available seats:</Label>
+            <Input type="number" name="availableSeats" onChange={handleInputChange} value={inputs.availableSeats} />
+          </FormFieldWrapper>
+          <FormFieldWrapper>
+            <Label>Description:</Label>
+            <Input type="text" name="description" onChange={handleInputChange} value={inputs.description} />
+          </FormFieldWrapper>
+          <FormFieldWrapper>
+            <Label>Instructions:</Label>
+            <Input type="text" name="instructions" onChange={handleInputChange} value={inputs.instructions} />
+          </FormFieldWrapper>
+          <FormFieldWrapper>
+            <Label>Phone number:</Label>
+            <Input type="tel" name="phoneNumber" onChange={handleInputChange} value={inputs.phoneNumber} />
+          </FormFieldWrapper>
+          <FormFieldWrapper>
+            <div css={{ display: 'flex', flexDirection: 'column' }}>
+              <Label>Amenities:</Label>
+              <div css={{ display: 'flex', flexWrap: 'wrap' }}>
+                <Label>
+                  <input type="checkbox" name="freeCoffee" onChange={handleInputChange} value={inputs.amenities.freeCoffee} />
+                  Free coffee
+                </Label>
+                <Label>
+                  <input type="checkbox" name="wifi" onChange={handleInputChange} value={inputs.amenities.freeWifi} />
+                  Wifi
+                </Label>
+                <Label>
+                  <input type="checkbox" name="kitchen" onChange={handleInputChange} value={inputs.amenities.kitchen} />
+                  Kitchen
+                </Label>
+                <Label>
+                  <input type="checkbox" name="games" onChange={handleInputChange} value={inputs.amenities.games} />
+                  Games
+                </Label>
+                <Label>
+                  <input type="checkbox" name="terrace" onChange={handleInputChange} value={inputs.amenities.terrace} />
+                  Terrace
+                </Label>
+                <Label>
+                  <input type="checkbox" name="printer" onChange={handleInputChange} value={inputs.amenities.printer} />
+                  Printer
+                </Label>
+              </div>
+            </div>
+          </FormFieldWrapper>
+          <FormFieldWrapper>
+            <Button type="submit">Submit</Button>
+          </FormFieldWrapper>
         </div>
       </form>
-    </>
+    </Wrapper>
   );
 };
 

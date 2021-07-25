@@ -1,5 +1,6 @@
 import React from 'react';
-import Typography from '@/common/components/Typography';
+import Typography from '@/components/Typography';
+import { useMediaQuery } from 'react-responsive';
 
 const Coworking = ({ city, direction }) => (
   <div css={{ display: 'flex', flexDirection: 'column', width: '30%' }}>
@@ -8,7 +9,7 @@ const Coworking = ({ city, direction }) => (
         width: '100%',
         padding: '40px 0 20px',
       }}
-      src="src/assets/img/Coworking1.png"
+      src="https://firebasestorage.googleapis.com/v0/b/cowork-97ad9.appspot.com/o/src%2Fassets%2Fimg%2FCoworking1.png?alt=media&token=8aadd6f3-bad0-4b56-a520-01139b1912aa"
       alt="app"
     />
     <Typography type="subtitle">{city}</Typography>
@@ -34,8 +35,8 @@ const coworkings = [
   },
 ];
 
-const Coworkings = () => (
-  <div css={{ display: 'flex', flexDirection: 'column' }}>
+const Coworkings = ({ ...props }) => (
+  <div css={{ display: 'flex', flexDirection: 'column', ...props }}>
     <Typography type="title">Coworkings</Typography>
     <div css={{ display: 'flex', justifyContent: 'space-between' }}>
       {coworkings.map((coworking) => (
@@ -49,4 +50,12 @@ const Coworkings = () => (
   </div>
 );
 
-export default Coworkings;
+const Component = () => {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1224px)',
+  });
+  const padding = isDesktopOrLaptop ? '164px 0' : '0 16px 50px';
+  return <Coworkings padding={padding} />;
+};
+
+export default Component;
