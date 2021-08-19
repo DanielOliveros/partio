@@ -58,6 +58,33 @@
           "Send": "Enviar"
         }
       }
+    },
+    "addCoworkingForm": {
+      "coworkingName": "Nombre del coworking:",
+      "direction": "Dirección:",
+      "openingHours": "Horario de apertura:",
+      "availableSeats": "Sitios disponibles:",
+      "description": "Descripción:",
+      "instructions": "Instrucciones:",
+      "phoneNumber": "Número de teléfono:",
+      "submit": "Enviar",
+      "amenities": {
+        "title": "Comodidades:",
+        "freeCoffee": "Café gratis",
+        "wifi": "Wifi",
+        "kitchen": "Cocina",
+        "games": "Juegos",
+        "terrace": "Terraza",
+        "printer": "Impresora"
+      }
+    },
+    "addUserForm": {
+      "userName": "Nombre:",
+      "userLastName": "Apellidos:",
+      "phoneNumber": "Teléfono:",
+      "email": "Email:",
+      "password": "Contraseña:",
+      "submit": "Enviar"
     }
   }
 }

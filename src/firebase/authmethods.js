@@ -3,12 +3,10 @@ import firebase from 'firebase/app';
 import firebaseconfig from './firebaseIndex';
 
 export const authMethods = {
-  signUp: (email, password, setErrors, setToken) => {
+  signUp: (email, password, setErrors) => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(async (res) => {
-        const token = await Object.entries(res.user)[5][1].b;
-        await localStorage.setItem('token', token);
-        setToken(window.localStorage.token);
+        console.log('user successfully registered', res);
       })
       .catch((err) => {
         setErrors((prev) => ([...prev, err.message]));

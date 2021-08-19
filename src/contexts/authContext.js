@@ -5,8 +5,6 @@ import React, {
 import { authMethods } from '@/firebase/authmethods';
 import PropTypes from 'prop-types';
 
-// const AUTH_OBJ = 'AUTH_OBJ';
-
 export const AuthContext = createContext();
 
 export default function AuthContextProvider({ children }) {
@@ -20,9 +18,23 @@ export default function AuthContextProvider({ children }) {
     authMethods.signOut(setErrors, setToken);
   };
 
+  const handleSignUp = (
+    {
+      email,
+      password,
+    },
+  ) => {
+    authMethods.signUp(
+      email,
+      password,
+      setErrors,
+    );
+  };
+
   return (
     <AuthContext.Provider value={{
       handleSignin,
+      handleSignUp,
       handleSignOut,
       inputs,
       setInputs,

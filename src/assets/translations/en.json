@@ -58,6 +58,33 @@
           "send": "Send"
         }
       }
+    },
+    "addCoworkingForm": {
+      "coworkingName": "Coworking name:",
+      "direction": "Direction:",
+      "openingHours": "Opening hours:",
+      "availableSeats": "Available seats:",
+      "description": "Description:",
+      "instructions": "Instructions:",
+      "phoneNumber": "Phone number:",
+      "submit": "Submit",
+      "amenities": {
+        "title": "Amenities:",
+        "freeCoffee": "Free coffee",
+        "wifi": "Wifi",
+        "kitchen": "Kitchen",
+        "games": "Games",
+        "terrace": "Terrace",
+        "printer": "Printer"
+      }
+    },
+    "addUserForm": {
+      "userName": "Name:",
+      "userLastName": "Last name:",
+      "phoneNumber": "Phone number:",
+      "email": "Email:",
+      "password": "Password:",
+      "submit": "Submit"
     }
   }
 }
